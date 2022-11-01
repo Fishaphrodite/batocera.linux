@@ -87,7 +87,7 @@ test $? -eq 0 || exit 1
 echo "need to download ${size}mb"
 
 # check free space on fs
-for fs in /userdata /boot
+for fs in /userdata/system/upgrade /boot
 do
     freespace=$(df -m "${fs}" | tail -1 | awk '{print $4}')
     test $? -eq 0 || exit 1
